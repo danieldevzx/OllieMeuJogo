@@ -1,15 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://bwordnxghtuxj"]
+[gd_scene load_steps=10 format=3 uid="uid://b440xohd2u0o3"]
 
 [ext_resource type="Texture2D" uid="uid://cjcbxiyl7ep7r" path="res://779e0c06c912b96e54015d6de3471c83.jpg" id="1_p2p64"]
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_u6se8"]
-[ext_resource type="Texture2D" uid="uid://ctrbapxct7j33" path="res://area.jpeg" id="2_a5qr7"]
+[ext_resource type="AudioStream" uid="uid://dlr51rcweos38" path="res://KICK_BUMBO.mp3" id="4_3katf"]
 [ext_resource type="Texture2D" uid="uid://ciu1u2bf4show" path="res://assets/bumbo_desativado.png" id="4_bwr6x"]
-[ext_resource type="Texture2D" uid="uid://donudukua6d8j" path="res://assets/bumbo_ativado.png" id="5_qbhf1"]
-[ext_resource type="AudioStream" uid="uid://dlr51rcweos38" path="res://dance_kick3-92807.mp3" id="6_73gc3"]
-[ext_resource type="Texture2D" uid="uid://c70i3bb8g2lsc" path="res://auto.png" id="7_b5n41"]
 [ext_resource type="Texture2D" uid="uid://bkgjjx7q12iar" path="res://assets/caixa_1_desativada.png" id="7_hlyw1"]
 [ext_resource type="Texture2D" uid="uid://bxy5rde770iqd" path="res://assets/caixa_1_ativada.png" id="8_jkehd"]
 [ext_resource type="AudioStream" uid="uid://beke04ims8maj" path="res://tr808-snare-drum-241403.mp3" id="9_ky4ux"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a7hin"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_al43p"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_u6se8")
@@ -24,7 +25,7 @@ texture = ExtResource("1_p2p64")
 visible = false
 position = Vector2(201, 746.5)
 scale = Vector2(1.35333, 0.64881)
-texture = ExtResource("2_a5qr7")
+texture = SubResource("CompressedTexture2D_a7hin")
 
 [node name="Songs" type="Label" parent="."]
 texture_filter = 1
@@ -36,25 +37,20 @@ size_flags_horizontal = 4
 text = "Total Songs:
 "
 
-[node name="Kick" type="Node" parent="."]
-
-[node name="Kick" type="TextureButton" parent="Kick"]
-offset_left = 102.0
-offset_top = 337.0
-offset_right = 314.0
-offset_bottom = 591.0
-texture_normal = ExtResource("4_bwr6x")
-texture_pressed = ExtResource("5_qbhf1")
-
-[node name="Kick2" type="AudioStreamPlayer2D" parent="Kick"]
-stream = ExtResource("6_73gc3")
-
 [node name="bumbo" type="Node" parent="."]
 
-[node name="Button" type="Button" parent="bumbo"]
-visible = false
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Bumbo" type="Button" parent="bumbo"]
+offset_left = 159.0
+offset_top = 522.0
+offset_right = 257.0
+offset_bottom = 607.0
+
+[node name="bumbo" type="Sprite2D" parent="bumbo"]
+position = Vector2(212, 577)
+texture = ExtResource("4_bwr6x")
+
+[node name="bumbo2" type="AudioStreamPlayer2D" parent="bumbo"]
+stream = ExtResource("4_3katf")
 
 [node name="Caixa" type="Node" parent="."]
 
@@ -78,8 +74,8 @@ offset_top = 575.0
 offset_right = 803.0
 offset_bottom = 1095.0
 scale = Vector2(0.2, 0.2)
-icon = ExtResource("7_b5n41")
+icon = SubResource("CompressedTexture2D_al43p")
 
-[connection signal="pressed" from="Kick/Kick" to="." method="_on_kick_pressed"]
+[connection signal="pressed" from="bumbo/Bumbo" to="." method="_on_bumbo_pressed"]
 [connection signal="pressed" from="Caixa/Snare" to="." method="_on_snare_pressed"]
 [connection signal="pressed" from="Upgrade" to="." method="_on_upgrade_pressed"]

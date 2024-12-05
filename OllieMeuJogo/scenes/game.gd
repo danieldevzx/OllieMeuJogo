@@ -3,43 +3,37 @@ extends Node2D
 var songs = 0
 var songsPerSeconds = 0
 @onready var songLabel = $Songs
-@onready var songPerSLabel = $SongsPerSecond
-@onready var soundKick = $Kick/AudioStreamPlayer2D
-@onready var soundSnare = $Caixa/Snare1
-@onready var timer = $Timer
-@onready var textureButton = $Kick/TextureButton
-
-var is_pressed = false
-
+@onready var soundKick = $bumbo/bumbo2
+@onready var bumboSprite = $bumbo/bumbo
+var originalSprite : Texture  
 
 func _ready() -> void:
+	originalSprite = bumboSprite.texture
 	update_labels()
-
 
 func _on_upgrade_pressed() -> void:
 	if songs >= 100:
 		songs -= 100
-		timer.start()
 		update_labels()
 
 func update_labels() -> void:
 	songLabel.text = "Songs: " + str(songs)
 
-func toggle_texture_button_animation() -> void:
-	is_pressed = !is_pressed
-	if is_pressed:
-		textureButton.pressed
-	else:
-		textureButton.pressed = is_pressed
+func _on_bumbo_pressed() -> void:
+	# Mudar o sprite do bumbo
+	bumboSprite.texture = preload("res://assets/bumbo_ativado.png")  # Substitua pelo caminho do novo sprite
+	songs += 10
+	update_labels()
+	soundKick.play()
 
+	# Espera 0.2 segundos utilizando a sintaxe await
+	var timer = Timer.new()  # Cria um novo Timer
+	add_child(timer)  # Adiciona o Timer como filho
+	timer.wait_time = 0.2  # Define o tempo de espera
+	timer.start()  # Inicia o Timer
 
-func _on_kick_pressed() -> void:
-		songs += 10
-		update_labels()
-		soundKick.play()
+	await timer.timeout  # Aguarda o evento timeout do Timer
 
-
-func _on_snare_pressed() -> void:
-		songs += 10
-		update_labels()
-		soundSnare.play()
+	# Retorna ao sprite original
+	bumboSprite.texture = originalSprite
+	timer.queue_free()  # Libera o Timer após o uso
