@@ -13,3 +13,21 @@ config_version=5
 config/name="OllieMeuJogo"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[input]
+
+Up={
+"deadzone": 0.5,
+"events": []
+}
+
+[layer_names]
+
+2d_render/layer_1="up"
+2d_render/layer_2="down"
+2d_render/layer_3="left"
+2d_render/layer_4="right"
+2d_physics/layer_1="up"
+2d_physics/layer_2="down"
+2d_physics/layer_3="left"
+2d_physics/layer_4="right"
