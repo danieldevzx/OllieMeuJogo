@@ -1,0 +1,511 @@
+[gd_scene load_steps=4 format=3 uid="uid://ck6igm6as7gkp"]
+
+[ext_resource type="Script" path="res://piano.gd" id="1_amgou"]
+[ext_resource type="Script" path="res://braço.gd" id="2_27huy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7kjbm"]
+
+[node name="Piano" type="Node2D"]
+script = ExtResource("1_amgou")
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="container" type="Node2D" parent="Timer"]
+position = Vector2(877, 144)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container"]
+offset_left = 4.0
+offset_top = -20392.0
+offset_right = 44.0
+offset_bottom = -20352.0
+scale = Vector2(6.78178, 522.44)
+
+[node name="braço" type="CharacterBody2D" parent="Timer/container"]
+script = ExtResource("2_27huy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(2, 447)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(2, 347)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D2"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(2, 247)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D3"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(2, 147)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D4"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D5" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(2, 47)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D5"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D6" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(2, -53)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D6"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D7" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(0, -142)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D7"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D8" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(0, -242)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D8"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D9" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(0, -342)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D9"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D10" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(0, -442)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D10"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D11" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(0, -542)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D11"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D12" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(0, -642)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D12"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D13" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(1, -734)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D13"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D14" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(1, -834)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D14"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D15" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(1, -934)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D15"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D16" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(1, -1034)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D16"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D17" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(1, -1134)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D17"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D18" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(1, -1234)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D18"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D19" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-1, -1323)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D19"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D20" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-1, -1423)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D20"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D21" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-1, -1523)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D21"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D22" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-1, -1623)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D22"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D23" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-1, -1723)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D23"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D24" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-1, -1823)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D24"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D25" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-2, -1913)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D25"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D26" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-2, -2013)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D26"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D27" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-2, -2113)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D27"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D28" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-2, -2213)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D28"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D29" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-2, -2313)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D29"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D30" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-2, -2413)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D30"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D31" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-4, -2502)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D31"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D32" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-4, -2602)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D32"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D33" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-4, -2702)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D33"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D34" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-4, -2802)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D34"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D35" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-4, -2902)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D35"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D36" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-4, -3002)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D36"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D37" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-3, -3094)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D37"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D38" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-3, -3194)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D38"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D39" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-3, -3294)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D39"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D40" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-3, -3394)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D40"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D41" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-3, -3494)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D41"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D42" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-3, -3594)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D42"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D43" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-5, -3683)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D43"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D44" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-5, -3783)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D44"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D45" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-5, -3883)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D45"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D46" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-5, -3983)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D46"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D47" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-5, -4083)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D47"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D48" type="Sprite2D" parent="Timer/container/braço"]
+position = Vector2(-5, -4183)
+
+[node name="ColorRect" type="ColorRect" parent="Timer/container/braço/Sprite2D48"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.96, 0.36)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Timer/container/braço"]
+position = Vector2(131, 501)
+shape = SubResource("CircleShape2D_7kjbm")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
