@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwordnxghtuxj"]
+
+[ext_resource type="Texture2D" uid="uid://cjcbxiyl7ep7r" path="res://779e0c06c912b96e54015d6de3471c83.jpg" id="1_p2p64"]
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_u6se8"]
+[ext_resource type="Texture2D" uid="uid://ctrbapxct7j33" path="res://area.jpeg" id="2_a5qr7"]
+[ext_resource type="Texture2D" uid="uid://ciu1u2bf4show" path="res://assets/bumbo_desativado.png" id="4_bwr6x"]
+[ext_resource type="Texture2D" uid="uid://donudukua6d8j" path="res://assets/bumbo_ativado.png" id="5_qbhf1"]
+[ext_resource type="AudioStream" uid="uid://dlr51rcweos38" path="res://dance_kick3-92807.mp3" id="6_73gc3"]
+[ext_resource type="Texture2D" uid="uid://c70i3bb8g2lsc" path="res://auto.png" id="7_b5n41"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_u6se8")
+
+[node name="BG" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(200, 401.5)
+scale = Vector2(0.372222, 0.417188)
+texture = ExtResource("1_p2p64")
+
+[node name="Points" type="Sprite2D" parent="."]
+position = Vector2(201, 746.5)
+scale = Vector2(1.35333, 0.64881)
+texture = ExtResource("2_a5qr7")
+
+[node name="Songs" type="Label" parent="."]
+texture_filter = 1
+offset_left = 165.0
+offset_top = 731.5
+offset_right = 215.0
+offset_bottom = 754.5
+size_flags_horizontal = 4
+text = "Total Songs:
+"
+
+[node name="SongsPerSecond" type="Label" parent="."]
+texture_filter = 1
+offset_left = 3.0
+offset_top = 773.0
+offset_right = 131.0
+offset_bottom = 796.0
+size_flags_horizontal = 4
+text = "Songs / seconds:
+"
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Kick" type="Node" parent="."]
+
+[node name="TextureButton" type="TextureButton" parent="Kick"]
+offset_top = 1.0
+offset_right = 400.0
+offset_bottom = 801.0
+texture_normal = ExtResource("4_bwr6x")
+texture_pressed = ExtResource("5_qbhf1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Kick"]
+stream = ExtResource("6_73gc3")
+
+[node name="Upgrade" type="Button" parent="."]
+offset_left = 283.0
+offset_top = 575.0
+offset_right = 803.0
+offset_bottom = 1095.0
+scale = Vector2(0.2, 0.2)
+icon = ExtResource("7_b5n41")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Kick/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="toggled" from="Kick/TextureButton" to="." method="_on_texture_button_toggled"]
+[connection signal="pressed" from="Upgrade" to="." method="_on_upgrade_pressed"]

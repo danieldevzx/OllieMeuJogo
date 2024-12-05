@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3bdj8dx333gj"
-path="res://.godot/imported/up.png-e05d8ef68afaab1f2a12687d88973546.ctex"
+uid="uid://donudukua6d8j"
+path="res://.godot/imported/bumbo_ativado.png-8a25f7c5f588bf1d6fbc21fcbe6e6fad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://up.png"
-dest_files=["res://.godot/imported/up.png-e05d8ef68afaab1f2a12687d88973546.ctex"]
+source_file="res://assets/bumbo_ativado.png"
+dest_files=["res://.godot/imported/bumbo_ativado.png-8a25f7c5f588bf1d6fbc21fcbe6e6fad.ctex"]
 
 [params]
 

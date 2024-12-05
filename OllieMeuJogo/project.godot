@@ -11,8 +11,18 @@ config_version=5
 [application]
 
 config/name="OllieMeuJogo"
+run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=400
+window/size/viewport_height=800
+
+[dotnet]
+
+project/assembly_name="OllieMeuJogo"
 
 [input]
 
@@ -31,3 +41,7 @@ Up={
 2d_physics/layer_2="down"
 2d_physics/layer_3="left"
 2d_physics/layer_4="right"
+
+[rendering]
+
+renderer/rendering_method="mobile"
