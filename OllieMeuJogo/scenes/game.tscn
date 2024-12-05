@@ -1,18 +1,250 @@
-[gd_scene load_steps=11 format=3 uid="uid://bwordnxghtuxj"]
+[gd_scene load_steps=42 format=3 uid="uid://bwordnxghtuxj"]
 
 [ext_resource type="Texture2D" uid="uid://cjcbxiyl7ep7r" path="res://779e0c06c912b96e54015d6de3471c83.jpg" id="1_p2p64"]
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_u6se8"]
+[ext_resource type="Texture2D" uid="uid://bbfy0f3jgufvf" path="res://assets/Imagem do WhatsApp de 2024-12-05 à(s) 19.04.27_3f451fee.jpg" id="2_21mba"]
 [ext_resource type="Texture2D" uid="uid://ctrbapxct7j33" path="res://area.jpeg" id="2_a5qr7"]
 [ext_resource type="Texture2D" uid="uid://ciu1u2bf4show" path="res://assets/bumbo_desativado.png" id="4_bwr6x"]
+[ext_resource type="Texture2D" uid="uid://bgbrl163al23w" path="res://assets/prato_2_ativado.png" id="4_gru5i"]
+[ext_resource type="Texture2D" uid="uid://cfd4vbj1pnk1v" path="res://assets/prato_2_desativado.png" id="5_gdnvg"]
 [ext_resource type="Texture2D" uid="uid://donudukua6d8j" path="res://assets/bumbo_ativado.png" id="5_qbhf1"]
 [ext_resource type="AudioStream" uid="uid://dlr51rcweos38" path="res://dance_kick3-92807.mp3" id="6_73gc3"]
+[ext_resource type="AudioStream" uid="uid://cny0jojaqxhcn" path="res://hihat-closing-98355.mp3" id="6_stxir"]
 [ext_resource type="Texture2D" uid="uid://c70i3bb8g2lsc" path="res://auto.png" id="7_b5n41"]
 [ext_resource type="Texture2D" uid="uid://bkgjjx7q12iar" path="res://assets/caixa_1_desativada.png" id="7_hlyw1"]
 [ext_resource type="Texture2D" uid="uid://bxy5rde770iqd" path="res://assets/caixa_1_ativada.png" id="8_jkehd"]
 [ext_resource type="AudioStream" uid="uid://beke04ims8maj" path="res://tr808-snare-drum-241403.mp3" id="9_ky4ux"]
+[ext_resource type="Texture2D" uid="uid://b5s3scx7v8urg" path="res://assets/caixa_2_ativada.png" id="10_cfmgd"]
+[ext_resource type="Texture2D" uid="uid://4nrlhmf801vb" path="res://assets/caixa_2_desativada.png" id="11_1avho"]
+[ext_resource type="AudioStream" uid="uid://dans3hbopf86f" path="res://tr808-clap-241405.mp3" id="13_ycfhe"]
+[ext_resource type="Texture2D" uid="uid://di0x6j0d7wfsg" path="res://assets/prato_ativado.png" id="16_ng6jh"]
+[ext_resource type="Texture2D" uid="uid://lcphjl7lvuli" path="res://assets/prato_desativado.png" id="17_lbycw"]
+[ext_resource type="AudioStream" uid="uid://ctxu7b630uixr" path="res://tr707-crash-cymbal-241376.mp3" id="18_d6jvi"]
+[ext_resource type="Texture2D" uid="uid://bsdaham5mtv8g" path="res://assets/caixa_3_ativada.png" id="20_3tfpc"]
+[ext_resource type="Texture2D" uid="uid://d32i3rlh866g1" path="res://assets/caixa_3_desativada.png" id="21_rrdv7"]
+[ext_resource type="AudioStream" uid="uid://bolcucmhpwgyk" path="res://snare-3-243039.mp3" id="22_4kur1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1v8v"]
+atlas = ExtResource("4_gru5i")
+region = Rect2(0, 0, 400, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5e5h8"]
+atlas = ExtResource("5_gdnvg")
+region = Rect2(0, 0, 400, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lkpw7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1v8v")
+}],
+"loop": true,
+"name": &"ativado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5e5h8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htdrw"]
+atlas = ExtResource("5_qbhf1")
+region = Rect2(0, 0, 212, 254)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1a677"]
+atlas = ExtResource("4_bwr6x")
+region = Rect2(0, 0, 212, 254)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ib1cq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htdrw")
+}],
+"loop": false,
+"name": &"ativado",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1a677")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1oeb"]
+atlas = ExtResource("10_cfmgd")
+region = Rect2(0, 0, 400, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qm37i"]
+atlas = ExtResource("11_1avho")
+region = Rect2(0, 0, 400, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vt4q1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1oeb")
+}],
+"loop": true,
+"name": &"ativado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qm37i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bj1ug"]
+atlas = ExtResource("8_jkehd")
+region = Rect2(0, 0, 400, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ka6h"]
+atlas = ExtResource("7_hlyw1")
+region = Rect2(0, 0, 400, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d6mpv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bj1ug")
+}],
+"loop": true,
+"name": &"ativado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ka6h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ju6xx"]
+atlas = ExtResource("16_ng6jh")
+region = Rect2(0, 0, 400, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dkx2"]
+atlas = ExtResource("17_lbycw")
+region = Rect2(0, 0, 400, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mm7iq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ju6xx")
+}],
+"loop": true,
+"name": &"ativado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dkx2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10ucu"]
+atlas = ExtResource("20_3tfpc")
+region = Rect2(0, 0, 400, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vxu5"]
+atlas = ExtResource("21_rrdv7")
+region = Rect2(0, 0, 400, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_duqay"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10ucu")
+}],
+"loop": true,
+"name": &"ativado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vxu5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_u6se8")
+
+[node name="shop" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(200, 400)
+scale = Vector2(0.759013, 0.753296)
+texture = ExtResource("2_21mba")
+
+[node name="exit_button" type="Button" parent="shop"]
+z_index = 5
+offset_left = 165.0
+offset_top = -485.0
+offset_right = 224.0
+offset_bottom = -433.0
+text = "X"
+
+[node name="ColorRect" type="ColorRect" parent="shop"]
+z_index = 3
+offset_left = 376.805
+offset_top = -476.572
+offset_right = 433.805
+offset_bottom = -420.572
+color = Color(1, 0, 0, 1)
+
+[node name="comprar_caixa" type="Button" parent="shop"]
+offset_left = 101.0
+offset_top = 84.0
+offset_right = 205.0
+offset_bottom = 152.0
+flat = true
+
+[node name="comprar_prato" type="Button" parent="shop"]
+offset_left = 100.0
+offset_top = -285.0
+offset_right = 212.0
+offset_bottom = -212.0
+flat = true
+
+[node name="comprar_snare" type="Button" parent="shop"]
+offset_left = 101.0
+offset_top = -406.0
+offset_right = 206.0
+offset_bottom = -338.0
+flat = true
+
+[node name="comprar_clap" type="Button" parent="shop"]
+offset_left = 101.0
+offset_top = -38.0
+offset_right = 209.0
+offset_bottom = 24.0
+flat = true
+
+[node name="comprar_hihat" type="Button" parent="shop"]
+offset_left = 100.0
+offset_top = -161.0
+offset_right = 211.0
+offset_bottom = -93.0
+flat = true
 
 [node name="BG" type="Sprite2D" parent="."]
 visible = false
@@ -36,25 +268,53 @@ size_flags_horizontal = 4
 text = "Total Songs:
 "
 
+[node name="hihat" type="Node" parent="."]
+
+[node name="hihat_button" type="Button" parent="hihat"]
+offset_left = 18.0
+offset_top = 231.0
+offset_right = 144.0
+offset_bottom = 292.0
+flat = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="hihat"]
+z_index = -1
+position = Vector2(200, 400)
+sprite_frames = SubResource("SpriteFrames_lkpw7")
+animation = &"ativado"
+autoplay = "default"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="hihat"]
+stream = ExtResource("6_stxir")
+
 [node name="Kick" type="Node" parent="."]
 
 [node name="Kick" type="TextureButton" parent="Kick"]
-offset_left = 102.0
-offset_top = 337.0
-offset_right = 314.0
-offset_bottom = 591.0
+offset_left = 465.0
+offset_top = 350.0
+offset_right = 677.0
+offset_bottom = 604.0
 texture_normal = ExtResource("4_bwr6x")
 texture_pressed = ExtResource("5_qbhf1")
-
-[node name="Kick2" type="AudioStreamPlayer2D" parent="Kick"]
-stream = ExtResource("6_73gc3")
+metadata/_edit_use_anchors_ = true
 
 [node name="bumbo" type="Node" parent="."]
 
-[node name="Button" type="Button" parent="bumbo"]
-visible = false
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="bumbo_button" type="Button" parent="bumbo"]
+offset_left = 114.0
+offset_top = 370.0
+offset_right = 275.0
+offset_bottom = 541.0
+flat = true
+
+[node name="Kick2" type="AudioStreamPlayer2D" parent="bumbo"]
+stream = ExtResource("6_73gc3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="bumbo"]
+position = Vector2(198, 475)
+sprite_frames = SubResource("SpriteFrames_ib1cq")
+animation = &"ativado"
+autoplay = "default"
 
 [node name="Caixa" type="Node" parent="."]
 
@@ -71,15 +331,102 @@ texture_pressed = ExtResource("8_jkehd")
 visible = false
 stream = ExtResource("9_ky4ux")
 
+[node name="snare_button" type="Button" parent="Caixa"]
+offset_left = 13.0
+offset_top = 360.0
+offset_right = 115.0
+offset_bottom = 436.0
+action_mode = 0
+flat = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Caixa"]
+position = Vector2(200, 403)
+sprite_frames = SubResource("SpriteFrames_vt4q1")
+animation = &"ativado"
+autoplay = "default"
+
+[node name="clap" type="Node" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="clap"]
+stream = ExtResource("13_ycfhe")
+
+[node name="clap_button" type="Button" parent="clap"]
+offset_left = 281.0
+offset_top = 354.0
+offset_right = 377.0
+offset_bottom = 481.0
+flat = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="clap"]
+position = Vector2(200, 400)
+sprite_frames = SubResource("SpriteFrames_d6mpv")
+animation = &"ativado"
+autoplay = "default"
+
+[node name="prato" type="Node" parent="."]
+
+[node name="prato_button" type="Button" parent="prato"]
+offset_left = 230.0
+offset_top = 176.0
+offset_right = 382.0
+offset_bottom = 276.0
+flat = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="prato"]
+z_index = -1
+position = Vector2(200, 400)
+sprite_frames = SubResource("SpriteFrames_mm7iq")
+animation = &"ativado"
+autoplay = "default"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="prato"]
+stream = ExtResource("18_d6jvi")
+
 [node name="Upgrade" type="Button" parent="."]
-visible = false
 offset_left = 283.0
 offset_top = 575.0
 offset_right = 803.0
 offset_bottom = 1095.0
 scale = Vector2(0.2, 0.2)
 icon = ExtResource("7_b5n41")
+flat = true
 
+[node name="caixinha1" type="Node" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="caixinha1"]
+position = Vector2(200, 400)
+sprite_frames = SubResource("SpriteFrames_duqay")
+autoplay = "default"
+
+[node name="caixa1_button" type="Button" parent="caixinha1"]
+offset_left = 212.0
+offset_top = 290.0
+offset_right = 288.0
+offset_bottom = 361.0
+flat = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="caixinha1"]
+stream = ExtResource("22_4kur1")
+
+[connection signal="pressed" from="shop/exit_button" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="shop/comprar_caixa" to="." method="_on_comprar_caixa_pressed"]
+[connection signal="pressed" from="shop/comprar_prato" to="." method="_on_comprar_prato_pressed"]
+[connection signal="pressed" from="shop/comprar_snare" to="." method="_on_comprar_snare_pressed"]
+[connection signal="pressed" from="shop/comprar_clap" to="." method="_on_comprar_clap_pressed"]
+[connection signal="pressed" from="shop/comprar_hihat" to="." method="_on_comprar_hihat_pressed"]
+[connection signal="button_down" from="hihat/hihat_button" to="." method="_on_hihat_button_button_down"]
+[connection signal="button_up" from="hihat/hihat_button" to="." method="_on_hihat_button_button_up"]
 [connection signal="pressed" from="Kick/Kick" to="." method="_on_kick_pressed"]
+[connection signal="button_down" from="bumbo/bumbo_button" to="." method="_on_bumbo_button_button_down"]
+[connection signal="button_up" from="bumbo/bumbo_button" to="." method="_on_bumbo_button_button_up"]
+[connection signal="pressed" from="bumbo/bumbo_button" to="." method="_on_bumbo_button_pressed"]
 [connection signal="pressed" from="Caixa/Snare" to="." method="_on_snare_pressed"]
+[connection signal="button_down" from="Caixa/snare_button" to="." method="_on_snare_button_button_down"]
+[connection signal="button_up" from="Caixa/snare_button" to="." method="_on_snare_button_button_up"]
+[connection signal="button_down" from="clap/clap_button" to="." method="_on_clap_button_button_down"]
+[connection signal="button_up" from="clap/clap_button" to="." method="_on_clap_button_button_up"]
+[connection signal="button_down" from="prato/prato_button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="prato/prato_button" to="." method="_on_button_button_up"]
 [connection signal="pressed" from="Upgrade" to="." method="_on_upgrade_pressed"]
+[connection signal="button_down" from="caixinha1/caixa1_button" to="." method="_on_caixa_1_button_button_down"]
+[connection signal="button_up" from="caixinha1/caixa1_button" to="." method="_on_caixa_1_button_button_up"]
