@@ -3,6 +3,7 @@ extends Node2D
 @onready var logo = $Logo
 @onready var nomeJogo = $RhythnClicker
 @onready var music = $Music
+@onready var buttonStart = $Start
 
 var moving_down = true
 var max_y = 300.0  # Posição Y na metade da tela
@@ -14,6 +15,7 @@ func _ready() -> void:
 	logo.position.y = -200.0  # Fora da tela para o logo
 	nomeJogo.position.y = -200.0
 	music.connect("finished", Callable(self, "_on_Music_finished"))
+	buttonStart.connect("pressed", Callable(self, "_on_start_pressed"))
 	music.play()
 
 func _process(delta: float) -> void:
@@ -35,3 +37,6 @@ func _process(delta: float) -> void:
 
 func _on_Music_finished() -> void:
 	music.play()
+
+func _on_start_pressed() -> void:
+	pass
