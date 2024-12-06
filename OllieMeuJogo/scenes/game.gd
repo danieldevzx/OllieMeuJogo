@@ -65,14 +65,25 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if songs >= 150:
 		comprar_snare.visible = true
+	else:
+		comprar_snare.visible = false
 	if songs >= 300:
 		comprar_hihat.visible = true
+	else:
+		comprar_hihat.visible = false
 	if songs >= 250:
 		comprar_prato.visible = true
+	else:
+		comprar_prato.visible = false
 	if songs >= 200:
 		comprar_caixa1.visible = true
+	else:
+		comprar_caixa1.visible = false
 	if songs >= 200:
 		comprar_clap.visible = true
+	else:
+		comprar_clap.visible = false
+
 	
 func _on_upgrade_pressed() -> void:
 	shop.visible = true

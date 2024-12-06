@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="OllieMeuJogo"
-run/main_scene="res://scenes/game.tscn"
+run/main_scene="res://INTRO/intro.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://game_manager.gd"
 
 [display]
 

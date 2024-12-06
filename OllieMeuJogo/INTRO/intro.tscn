@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0anhacn7l4o4"]
+
+[ext_resource type="Texture2D" uid="uid://bw3uyd4hydex8" path="res://assets/background.jpg" id="1_0hxps"]
+[ext_resource type="Texture2D" uid="uid://owacsj45w55c" path="res://assets/logo.png" id="1_6ohef"]
+[ext_resource type="Script" path="res://INTRO/intro.gd" id="1_soygu"]
+[ext_resource type="FontFile" uid="uid://wa07bq0bls10" path="res://assets/Hey Comic.ttf" id="2_12wbu"]
+[ext_resource type="AudioStream" uid="uid://c7kpf45cukchw" path="res://assets/joyfull.mp3" id="5_u62mx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oihom"]
+font = ExtResource("2_12wbu")
+font_size = 50
+font_color = Color(0.759737, 0.00327982, 0.981093, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Intro" type="Node2D"]
+script = ExtResource("1_soygu")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+position = Vector2(183, 395)
+scale = Vector2(0.752514, 0.752514)
+texture = ExtResource("1_0hxps")
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(193, 689)
+scale = Vector2(0.1625, 0.1625)
+texture = ExtResource("1_6ohef")
+
+[node name="RhythnClicker" type="Label" parent="."]
+texture_filter = 1
+offset_left = 25.0
+offset_top = 431.0
+offset_right = 362.0
+offset_bottom = 496.0
+text = "Rhythn Clicker"
+label_settings = SubResource("LabelSettings_oihom")
+horizontal_alignment = 1
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_u62mx")
+
+[node name="Start" type="Button" parent="."]
+offset_left = -5.0
+offset_right = 410.0
+offset_bottom = 811.0
+flat = true
+
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
